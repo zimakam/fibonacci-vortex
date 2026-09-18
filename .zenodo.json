@@ -1,0 +1,23 @@
+{
+  "title": "FibonacciVortex: Novel Vortex Core with φ-Modulated Circulation",
+  "description": "Vortex core model where circulation depends on distance via Fibonacci-weighted φ-exponential: Γ(r) = Γ₀·Σ F_k·φ^(−k·r/r_c). Gives hierarchy of scales with self-similarity Γ(φr)/Γ(r) → 1/φ. No analogous model found in literature.",
+  "creators": [
+    {
+      "name": "Ziyavutdinov, Magomed Kamalovich",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0005-9212-9921"
+    }
+  ],
+  "keywords": [
+    "vortex dynamics",
+    "Fibonacci",
+    "golden ratio",
+    "self-similarity",
+    "fluid mechanics",
+    "vortex core"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng"
+}
