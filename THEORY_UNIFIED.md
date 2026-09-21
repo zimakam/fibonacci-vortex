@@ -259,3 +259,49 @@ No machine-time, no physical field reversal — just an
 unstable stationary point in a mathematical potential.
 
 ## FINAL FINAL — 2026-09-21/22
+
+
+## 21. PARENT PROJECT CONNECTION — Quantum Master v12.1
+
+The work in this repository (FibonacciVortex theory) is one branch
+of a larger architecture, 'Quantum Master v12.1' by the same author.
+Relevant context:
+
+### Three vortex cores in parent project
+- FibonacciVortex  (this work) — phi-modulated circulation
+- GravitationalVortex — rho = kappa * sum |omega|^2
+- CorpuscularVortex — vortex = corpuscle = field
+
+### Shared components
+- NumberSystems: 8 bases including Fibonacci, Zeckendorf, Berg
+- HyperNav: phi-jump navigation (A*, bidirectional, multi-goal)
+- Bitcoin layer: UTXO, Mempool, Merkle (implemented)
+- Quantum simulator: Grover, Bell, GHZ, Steane, teleportation
+
+### Concepts not yet realized
+- phi-Chain: topological chain (Betti numbers instead of block height)
+- Proof of Topology (PoT): useful-work consensus
+- PQ-phi-Key: post-quantum signature with Zeckendorf compression
+- HyperNav integration into main loop
+- GPU / render stack
+
+### What is DONE in the parent project
+- 28 test groups pass
+- FibonacciVortex decays physically
+- HyperNav navigation works
+- Bitcoin UTXO layer works
+
+### What is NOT done
+- No physical realization of antigravity / time machine
+- No network layer
+- No GPU acceleration (Turbo is not real xN)
+- Refined millennium probes are insufficient (C0 without C1+C2)
+
+### Status of this connection
+The parent project is a computational architecture, not a physical
+theory. It is a framework for exploring phi-structured dynamics
+across multiple domains (vortices, numbers, navigation, cryptography).
+The FibonacciVortex theory in this repo is the theoretical core
+for one of its components.
+
+## END OF SESSION 2026-09-21/22 — TRUE FINAL
