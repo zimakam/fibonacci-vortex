@@ -278,3 +278,36 @@ is a numerical cap (unphysical v > c). The physical
 content is one-sided: the time-dilated side.
 
 ## TRULY FINAL
+
+
+## FINAL TEST — 8 systems × 7 points (2026-09-22, very late)
+
+Result: phi-quantization CONFIRMED at alpha=1 point.
+
+Table (berg = number of occupied phi-digits in 32-digit expansion):
+
+| point              | Gamma  | berg |
+|--------------------|--------|------|
+| r=0.3 (core)       | 8.1161 | 6    |
+| r=0.836 crossover  | 4.4610 | 5    |
+| r=1.0 (r_c)        | 3.8197 | 8    |
+| r=1.459 alpha=1    | 2.6533 | 3  <-- MIN
+| r=1.5 alpha peak   | 2.5807 | 6    |
+| r=2.0              | 1.9474 | 5    |
+| r=4.24 Schottky    | 1.1718 | 5    |
+
+Conclusion:
+- Only the phi-adapted system (berg) shows a structural signal.
+- The minimum of occupied phi-digits (3 of 32) coincides
+  with the exact self-similarity point alpha=1.
+- This is NOT a smooth trend; it is a sharp dip.
+- Weak secondary signal: factorial alternation [1,0,...].
+
+Six other systems (binary, gray, bal3, quat, unary, zeck):
+no signal. Consistent with previous tests.
+
+Interpretation: phi-structure is visible ONLY in phi-adapted
+representation. This is a specificity statement, not a universal
+property.
+
+## END OF SESSION 2026-09-21/22 — FINAL FINAL FINAL
