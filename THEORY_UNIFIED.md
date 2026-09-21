@@ -220,3 +220,42 @@ bases. This is expected and reinforces the specificity of
 the observation. It is NOT a universal property of the number.
 
 ## END OF SESSION 2026-09-21 — TRUE FINAL
+
+
+## 20. TWO-VORTEX SYSTEM — mirror extended, repulsion confirmed
+
+### Test setup
+V(r, theta) = Gamma(r, theta) + Gamma(d-r, theta)
+Eisenhart lift: ds^2 = 2 du dt + dr^2 - 2V dt^2
+Stationary geodesic: dV/dr = 0
+
+### Result 1: Mirror EXTENDS to two-vortex system (machine precision)
+Max |V(r,d,pi-theta) - V_alt(r,d,theta)| = 1.78e-15
+Verified for d in {1,2,3}, theta in {30,45,60,75} deg.
+
+### Result 2: NO emergence (negative)
+r_eq = d/2 exactly for all theta and d.
+By symmetry V(r) = V(d-r), midpoint is always stationary.
+No preferred scale beyond trivial midpoint.
+
+### Result 3: Repulsive equilibrium (observation)
+V''(d/2) < 0 for all tested (theta, d):
+  theta=40 d=1: V'' = -15.66 (peak)
+  theta=60 d=1: V'' = -14.11 (peak)
+  theta=60 d=2: V'' =  -6.22 (peak)
+  theta=70 d=1: V'' =  -4.43 (peak)
+
+Interpretation: the symmetric midpoint is a local MAXIMUM
+of V. Stationary geodesic is unstable. Two phi-vortex cores
+in this model do NOT form bound states.
+
+### Mathematical note
+V''(d/2) = 2 * Gamma''(d/2), so this reflects a property of
+the single-vortex function, not coupling dynamics.
+
+### Correct terminology
+This is REPULSIVE EQUILIBRIUM, not 'antigravity'.
+No machine-time, no physical field reversal — just an
+unstable stationary point in a mathematical potential.
+
+## FINAL FINAL — 2026-09-21/22
