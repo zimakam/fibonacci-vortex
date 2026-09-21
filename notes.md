@@ -311,3 +311,32 @@ representation. This is a specificity statement, not a universal
 property.
 
 ## END OF SESSION 2026-09-21/22 — FINAL FINAL FINAL
+
+
+## NS PROBE on FibonacciVortex field (2026-09-22, very late)
+
+Setup: N=32, nu=5e-3, dt=5e-4, 2/3 dealiasing, 400 steps.
+Initial field: tangential velocity from Gamma_Fib(r).
+
+Result:
+  step  t       omega_inf   BKM_integral
+     0  0.0005  36.60       0.018
+   200  0.1005  33.48       3.558
+   399  0.2000  27.63       6.607
+
+  initial mean omega_inf (first 40 steps): 36.51
+  final   mean omega_inf (last 40 steps):  28.19
+  ratio: 0.772   (DECAY)
+  BKM integral finite at t=0.2: 6.607
+
+Interpretation:
+- Viscous-dominated regime (nu=5e-3, low Re).
+- omega_inf decays smoothly, no blow-up observed.
+- BKM criterion (necessary condition for smoothness) not violated.
+- This is a NUMERICAL observation, not a proof of global regularity.
+- Millennium Prize remains open.
+
+Prior test without dealiasing produced NaN (aliasing artifact).
+With 2/3 dealiasing the scheme is stable.
+
+## ABSOLUTE FINAL — 2026-09-21/22
