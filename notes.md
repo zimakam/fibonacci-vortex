@@ -189,3 +189,27 @@ First test used ol=-ob/INV (division) -> ou=ol -> lambda=0.
 Correct is multiplication: ol=-ob*INV_PHI.
 
 ## End of session 2026-09-21 — FINAL
+
+
+## phi-quantization observation (last)
+
+At the alpha=1 point (r = 1.459 * r_c):
+- Gamma = 2.6533, phi-exponent = 2.028, so Gamma ~ phi^2 (1.4%)
+- Berg beta-expansion has LOCAL MIN of occupied digits (4 of 20)
+- Zeckendorf address = [21, 5]
+  vs crossover (r=0.836) = [34, 8, 2]
+  -> 21 = round(34/phi), 5 = round(8/phi)
+  This is a phi-downshift from the crossover point.
+
+Interpretation: at the point of exact self-similarity (alpha=1),
+the circulation simultaneously reaches:
+- a phi^2 quantisation level
+- a minimum of phi-digit entropy in Berg basis
+- a Zeckendorf address related to crossover by phi-downshift
+
+Status: OBSERVATION, not theorem.
+Global min of berg_ones at r=9 is trivial (Gamma~1.0).
+This is a local structural coincidence worth mentioning in Discussion.
+
+## END OF SESSION 2026-09-21
+## All results committed. Repository clean. Sleep.
