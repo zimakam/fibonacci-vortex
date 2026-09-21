@@ -1,5 +1,5 @@
 import math
-from fibonacci_vortex import FibonacciVortex, PHI, INV_PHI
+from fibonacci_vortex import FibonacciVortex, PHI, INV_PHI, FIB
 C_INF = -0.0665
 LOG_PHI = math.log(PHI)
 
