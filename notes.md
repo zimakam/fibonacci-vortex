@@ -248,3 +248,33 @@ Observation. Worth a Discussion subsection.
 Not a theorem (no proof of physical realizability).
 
 ## TRUE FINAL — 2026-09-21
+
+
+## FourTimes + √φ identity (very very late)
+
+### Exact result
+gamma(v) = 1/sqrt(1 - v^2)
+For v = 1/PHI = PHI - 1:
+  1 - 1/PHI^2 = 1/PHI  (since PHI^2 - PHI - 1 = 0)
+  gamma(1/PHI) = sqrt(PHI) = 1.2720...
+
+### Consequence for Time Machine
+In asymmetric mode:
+  T_subj_lower = T_obj / sqrt(PHI) = 0.7862 * T_obj
+  T_subj_upper -> 0 (frozen, v=PHI is unphysical)
+  Asymmetry: lower carries phi-dilated time
+
+### FourTimes connection
+- T_true       = 1.0
+- T_objective  = T_obj
+- T_subjective = T_obj / sqrt(PHI)  (in asymmetric lower)
+- T_real       = wall clock
+
+Four levels, one with exact phi-structure.
+
+### Status
+Observation. sqrt(PHI) is exact, but the upper side
+is a numerical cap (unphysical v > c). The physical
+content is one-sided: the time-dilated side.
+
+## TRULY FINAL
