@@ -213,3 +213,38 @@ This is a local structural coincidence worth mentioning in Discussion.
 
 ## END OF SESSION 2026-09-21
 ## All results committed. Repository clean. Sleep.
+
+
+## FourTimes — missed dimension (very late)
+
+### Structure (from Merkaba Time Machine code)
+T_true       = 1.0            absolute, invariant
+T_objective  = sum dt         coordinate time (accumulates)
+T_subjective = sum dt/gamma   proper time (per observer)
+T_real       = wall_clock     implementation time (Python)
+
+### Connection to FibonacciVortex
+- 4 levels of time <-> 4 dominant Fibonacci modes (k=1..4)
+- 4 times + 1 absolute <-> K = 5 (Schottky 4-level + ground)
+- Ratio T_subjective_lo / T_subjective_up = gamma_up/gamma_lo
+- In asymmetric Merkaba mode: ratio = 1/phi^2 (same as omega ratio)
+- omega_up/omega_lo = -PHI^2 <-> Merkaba lambda identity s^2*sqrt(5)/C^2
+
+### Physical interpretation
+Cell is born when two observers AGREE on angle (phase)
+but DISAGREE on subjective time elapsed.
+This is a SYNCHRONIZATION event across two time streams,
+not a physical time machine.
+
+### Why this matters
+FourTimes is not a data structure. It is a 4-level hierarchy
+consistent with:
+- K=5 selection (4+1)
+- Schottky anomaly (4 levels)
+- Fibonacci mode structure (4 dominant modes)
+
+### Status
+Observation. Worth a Discussion subsection.
+Not a theorem (no proof of physical realizability).
+
+## TRUE FINAL — 2026-09-21
