@@ -94,3 +94,36 @@ ORCID 0009-0005-9212-9921
 4. Theta phase transition (zero-crossing window)
 
 ## End of session 2026-09-21 (late)
+
+
+## Late session: Mirror theorem verified (mode-parity)
+
+### Identity
+Gamma(r, pi - theta) = Gamma_alt(r, theta)
+where Gamma_alt uses weights (-1)^k * F_k.
+
+Verified to machine precision (max error 1.78e-15).
+
+### Origin
+Trigonometric: cos(k*(pi - theta)) = (-1)^k * cos(k*theta)
+- Odd modes flip sign under theta -> pi - theta
+- Even modes preserved
+
+### Physical meaning
+- Upper and lower phases of the model are EXACTLY related
+- Not geometric reflection (r -> 2-r or r -> 1/r both FAIL)
+- Mode-parity symmetry, not spatial symmetry
+- Theta zero-crossing at theta=60 deg is the center of this symmetry
+
+### Rejected mirrors
+- r <-> 2-r (reflection): FAIL
+- r <-> 1/r (inversion): FAIL
+- theta <-> pi/2 - theta: FAIL (values differ)
+- theta <-> pi - theta: PASS (with (-1)^k flip)
+
+### Interpretation for Mirror theorem (CQG)
+The 'mirror theorem' from the original project is about
+MODE PARITY, not spatial symmetry. This is a correction
+of interpretation, not a failure of the theorem.
+
+## End of session 2026-09-21 (very late)
