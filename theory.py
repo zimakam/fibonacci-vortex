@@ -32,3 +32,26 @@ if __name__ == "__main__":
     for r in (0.8,1.0,1.2,1.5,2.0):
         ratio = fv.self_similarity(r)
         print("%4.2f  %.6f  %.6f  %+.6f" % (r, ratio, INV_PHI, ratio-INV_PHI))
+
+
+# ==== Burgers-vortex identity (verified 2026-09-21) ====
+def kbar_w(r, K=5, rc=1.0):
+    lam = math.log(PHI)/rc
+    num = 0.0; den = 0.0
+    for k in range(K):
+        w = k * FIB[k] * math.exp(-k*lam*r)
+        num += k * w
+        den += w
+    return num/den if den > 0 else 0.0
+
+def a_over_nu(r, K=5, rc=1.0):
+    lam = math.log(PHI)/rc
+    return kbar_w(r, K, rc)*lam/r + 1.0/r**2
+
+def verify_burgers_identity(r, K=5, rc=1.0, h=1e-5):
+    lam = math.log(PHI)/rc
+    def dG(r, n):
+        return sum((-k*lam)**n * FIB[k]*math.exp(-k*lam*r) for k in range(K))
+    lhs = dG(r, 2)/r - dG(r, 1)/r**2
+    rhs = -a_over_nu(r, K, rc) * dG(r, 1)
+    return lhs - rhs
