@@ -182,3 +182,41 @@ ORCID: 0009-0005-9212-9921
 License: MIT
 
 ## END OF SESSION 2026-09-21
+
+
+## 19. ENCODING SIGNALS ACROSS 8 NUMBER SYSTEMS
+
+Tested Gamma(r) at three key points (crossover, alpha=1, Schottky)
+in all 8 number systems of the Merkaba architecture.
+
+### Results
+
+| system | crossover | alpha=1 | Schottky | signal |
+|--------|-----------|---------|----------|--------|
+| binary | 6 ones    | 7 ones  | 5 ones   | none   |
+| gray   | 8 ones    | 9 ones  | 7 ones   | none   |
+| bal3   | 1 one     | 4 ones  | 3 ones   | none   |
+| quat   | 1 one     | 2 ones  | 3 ones   | none   |
+| zeck   | (greedy)  | (greedy)| compact  | method artifact |
+| berg   | 5 ones    | 3 ones (MIN) | 5 ones | YES |
+| unary  | len=22    | len=13  | len=5    | trivial (Gamma monotone) |
+| fact   | [1,3,1,0,0] | [1,0,1,0,0] | [1,2,1,0] | weak |
+
+### Conclusion
+
+Only the phi-adapted system (berg) shows a clear structural
+signal at alpha=1: minimum of occupied phi-digits (3 of 32,
+vs 5 at both other points).
+
+The factorial representation gives an alternating pattern at
+alpha=1 ([1,0,1,0,0] for 26), but this may be coincidental
+since it depends on the specific integer 26.
+
+The other six systems (binary, gray, bal3, quat, unary, and
+a naive Zeckendorf variant) show no signal.
+
+Interpretation: phi-structure is visible only in phi-adapted
+bases. This is expected and reinforces the specificity of
+the observation. It is NOT a universal property of the number.
+
+## END OF SESSION 2026-09-21 — TRUE FINAL
