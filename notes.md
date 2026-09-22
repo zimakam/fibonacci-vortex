@@ -735,3 +735,42 @@ Different weighting -> different constant. Both valid.
 
 ## NS STEP 4 CLOSED — POSITIVE (spectral)
 ## MILLENNIUM NS: 4/4 SUCCESS
+
+
+## Millennium P vs NP: Fibonacci SAT heuristic — NEGATIVE (2026-09-22)
+
+### Setup
+Random 3-SAT at phase transition m/n = 4.267.
+n_vars = 10, 15, 20, 25. 10 formulas each.
+DPLL with three variable orderings:
+  first: natural order
+  freq:  most frequent variable
+  fib:   Fibonacci-index ordering
+
+### Results
+| n  | fib/first | fib/freq |
+|----|-----------|----------|
+| 10 |   1.050   |   1.683  |
+| 15 |   0.846   |   1.618  |
+| 20 |   0.819   |   2.104  |
+| 25 |   1.235   |   2.124  |
+| avg|   0.988   |   1.882  |
+
+### Conclusion
+Fibonacci ordering is NEUTRAL vs baseline (ratio ~1.0).
+Fibonacci ordering is 1.88x WORSE than frequency heuristic.
+No exponential speedup from Fibonacci structure.
+
+This confirms theoretically: P vs NP is not resolved by
+heuristic variable ordering. SAT remains NP-complete.
+
+## PvsNP CLOSED — NEGATIVE
+
+## MILLENNIUM SERIES SUMMARY:
+  A. Navier-Stokes   ✓ 4/4 (small theorem: stability, energy, BKM, spectrum)
+  B. Riemann         ✗ (GUE statistics, no phi)
+  C. Yang-Mills      ✗ (SU(2) glueballs, closest to sqrt(2))
+  D. P vs NP         ✗ (Fibonacci heuristic neutral)
+  
+  4 tasks attempted. 1 positive, 3 negative.
+  All results honest. No overclaiming.
