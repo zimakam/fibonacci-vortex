@@ -23,7 +23,8 @@ M = N - 2
 L = np.zeros((M, M))
 for i in range(M):
     ii = i + 1  # interior index
-    L[i, i-1] = 1.0/(dr*dr * r[ii]) + 1.0/(2*dr * r[ii]*r[ii]) - ani_arr[ii]/(2*dr)
+    if i > 0:
+        L[i, i-1] = 1.0/(dr*dr * r[ii]) + 1.0/(2*dr * r[ii]*r[ii]) - ani_arr[ii]/(2*dr)
     L[i, i]   = -2.0/(dr*dr * r[ii])
     if i + 1 < M:
         L[i, i+1] = 1.0/(dr*dr * r[ii]) - 1.0/(2*dr * r[ii]*r[ii]) + ani_arr[ii]/(2*dr)
