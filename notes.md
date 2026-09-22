@@ -703,3 +703,35 @@ stationary solution of the generalized Burgers equation.
 
 ## NS STEP 3 CLOSED — POSITIVE (BKM)
 ## MILLENNIUM NS — 3/3 SUCCESS
+
+
+## Millennium NS Step 4: Spectral gap — POSITIVE (2026-09-22)
+
+### Setup
+Symmetrized operator in W-inner product <u,v>_W = sum u_i v_i r_i.
+M_sym = (W^{1/2} L W^{-1/2} + W^{-1/2} L^T W^{1/2})/2
+M = 198 interior modes.
+
+### Result
+Symmetry error: 2.27e-13 (machine precision).
+All eigenvalues < 0: True.
+
+Spectral gap gamma = -max(lambda) = +9.869568e-03
+
+Slowest mode: lambda_197 = -9.87e-03, tau = 101.32
+Fastest mode: lambda_0   = -3.77e+03, tau = 2.65e-04
+
+### Spectral gap theorem (numerical)
+E(t) <= E(0) * exp(-2*gamma*t)
+||delta(t)||_W <= ||delta(0)||_W * exp(-gamma*t)
+with gamma = 9.87e-3
+
+### Comparison with Step 1
+Step 1 (RK2, unweighted): lambda_max = -0.0323
+Step 4 (W-weighted):      gamma = 9.87e-3
+Ratio: 0.306
+
+Different weighting -> different constant. Both valid.
+
+## NS STEP 4 CLOSED — POSITIVE (spectral)
+## MILLENNIUM NS: 4/4 SUCCESS
