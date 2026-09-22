@@ -378,3 +378,35 @@ Publication strategy: mathematical journal (J. Phys. A),
 not physics journal (Physics of Fluids).
 
 ## END OF PHYSICAL MOTIVATION SEARCH — 2026-09-22
+
+
+## Probe #7 SPARC fit — NEGATIVE RESULT (2026-09-22)
+
+Test: fit 3-model comparison on 8 SPARC galaxies.
+  VORTEX (3 params: A, rc, Yd) — chi2/dof mean = 0.48
+  NFW   (3 params: M200, c, Yd) — chi2/dof mean = 1.17
+  FibonacciVortex as halo (M(r) = integral of rho_fib, 3 params) — chi2/dof mean = 42.77
+
+Only 1 of 8 galaxies (F563-V1, small, short rotation curve) gave acceptable
+Fibonacci fit (chi2/dof = 0.33). All others failed badly.
+
+Reason: exponential decay of Gamma_fib(r) = sum F_k phi^(-k lambda r)
+is too fast for real DM halos, which require slowly-decaying profiles
+(NFW rho ~ 1/r^3, VORTEX v^2 -> const).
+
+Conclusion: FibonacciVortex is NOT a halo profile.
+It is a mathematical structure, not a physically-selected DM model.
+
+This confirms earlier findings:
+- H4 (RG-invariance) FAIL
+- H2 (resonance avoidance) weak
+- H1 (turbulence cascade) FAIL
+- Variational principle FAIL
+- SPARC halo fit FAIL
+
+Five independent physical checks. All negative.
+
+Publication strategy: mathematics journal (J. Phys. A).
+Not physics journal, not astrophysics journal.
+
+## END OF PROBE #7
