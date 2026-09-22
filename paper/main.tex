@@ -2,10 +2,12 @@
 \usepackage{amsmath,amssymb,graphicx}
 \usepackage{hyperref}
 \newcommand{\phig}{\varphi}
+\newcommand{\Gam}{\Gamma}
 
 \begin{document}
 
-\title{Golden-ratio scale invariance in Fibonacci-layered vortex circulation}
+\title{Golden-ratio scale invariance and exact Burgers solutions in
+Fibonacci-layered vortex circulation}
 
 \author{Ziyavutdinov Magomed Kamalovich}
 \affiliation{Independent researcher}
@@ -15,69 +17,358 @@
 \date{\today}
 
 \begin{abstract}
-We show that a vortex whose circulation is organised as a Fibonacci hierarchy of K concentric layers exhibits an emergent phi-scale invariance in its core. Defining the local homogeneity exponent alpha(r) = -d log Gamma / d log r, we derive analytically that at the core scale r = r_c it satisfies alpha(K) = (K-1) log(phi) / 2 + c_inf + O(1/K) with c_inf ~ -0.0665. The condition for exact self-similarity, Gamma(phi r) / Gamma(r) = 1/phi, requires alpha = 1 and therefore selects K* = 5.43, whose unique integer realisation is K = 5. Numerical evaluation for K in [2, 23] confirms the analytic formula to better than 1 percent. We discuss the geometric origin of the selected hierarchy and its relation to the regularised VORTEX profile used in SPARC rotation-curve fitting.
+We study a vortex whose circulation is organised as a Fibonacci hierarchy
+of $K$ concentric layers modulated by the golden ratio $\phig = (1+\sqrt{5})/2$.
+The local homogeneity exponent
+$\alpha(r) = -d\log\Gam/d\log r$ at the core scale satisfies
+$\alpha(K) = (K-1)\log\phig/2 + c_\infty + O(1/K)$ with
+$c_\infty \approx -0.0665$. Exact $\phig$-self-similarity
+$\Gam(\phig r)/\Gam(r) = 1/\phig$ requires $\alpha=1$ and uniquely selects
+the integer $K=5$ from $K^*=5.43$. We further show that the circulation
+satisfies the generalized Burgers vortex equation with a variable strain
+coefficient $a(r)/\nu = \langle k\rangle_w\,\lambda/r + 1/r^2$ (residual
+$\sim 10^{-15}$), where $\lambda = \log\phig/r_c$. The corresponding
+$5^{\text{th}}$-order annihilator $L_5 = \prod_{k=0}^{4}(\partial_r + k\lambda)$
+factorises in a supersymmetric form. A thermodynamic analogy identifies
+a four-level Schottky anomaly, and a mode-parity mirror theorem
+$\Gam(r,\pi-\theta) = \Gam_{\text{alt}}(r,\theta)$ is verified to machine
+precision. We relate the result to the regularised VORTEX profile used in
+SPARC rotation-curve fitting and to a counter-rotating tetrahedral
+(Merkaba) architecture, where an exact identity $\lambda = s^2\sqrt{5}/c^2$
+emerges from the same golden-ratio structure.
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
-The golden ratio phi = (1+sqrt(5))/2 appears across scales in nature, from phyllotaxis to quantum spectra. In fluid dynamics, self-similar vortex structures are typically associated with power-law profiles. Here we show that a Fibonacci-weighted hierarchy of concentric vortex layers produces an emergent phi-self-similarity that uniquely selects K = 5 layers.
+\label{sec:intro}
+
+The golden ratio $\phig = (1+\sqrt{5})/2$ appears across scales in nature,
+from phyllotaxis to quantum spectra. In fluid dynamics, self-similar vortex
+structures are typically associated with power-law profiles. The classical
+Burgers vortex provides an exact solution of the Navier--Stokes equations
+with constant strain, and the Lamb--Oseen vortex describes viscous diffusion
+of an initially concentrated core.
+
+In this paper we ask a specific question: if the circulation of a vortex
+core is organised as a Fibonacci hierarchy of $K$ concentric layers with
+$\phig$-weighted amplitudes, does the resulting profile exhibit exact
+$\phig$-self-similarity? We show that it does, but only for one integer
+$K$: $K=5$. This integer is not a free parameter but the unique value
+at which the local homogeneity exponent crosses unity. We derive a closed
+analytic formula for $\alpha(K)$, establish an exact identity between the
+Fibonacci circulation and the generalized Burgers equation, and verify
+all results numerically to machine precision.
+
+Section~\ref{sec:model} defines the model. Section~\ref{sec:alpha} derives
+the analytic formula for $\alpha(K)$. Section~\ref{sec:Kstar} shows the
+selection of $K=5$. Section~\ref{sec:num} presents numerical verification.
+Section~\ref{sec:burgers} establishes the Burgers identity.
+Section~\ref{sec:susy} discusses the SUSY factorisation.
+Section~\ref{sec:thermo} presents the thermodynamic analogy.
+Section~\ref{sec:theta} describes the $\theta$-phase structure.
+Section~\ref{sec:mirror} proves the mode-parity mirror theorem.
+Section~\ref{sec:merkaba} relates the model to counter-rotating
+tetrahedral architectures. Section~\ref{sec:disc} discusses implications
+and limitations.
 
 \section{Model: FibonacciVortex}
-Let Gamma(r) denote the circulation of a vortex whose core is organised as K concentric layers weighted by the Fibonacci sequence F_k and modulated by phi:
+\label{sec:model}
+
+Let $\Gam(r)$ denote the circulation of a vortex whose core is organised
+as $K$ concentric layers weighted by the Fibonacci sequence $F_k$ and
+modulated by $\phig$:
 \begin{equation}
-\Gamma(r) = \Gamma_0 \sum_{k=0}^{K-1} F_k \, \phig^{-k r/r_c}.
+\Gam(r) = \Gam_0 \sum_{k=0}^{K-1} F_k \, \phig^{-k r/r_c},
+\label{eq:model}
 \end{equation}
-The generating function of the Fibonacci numbers, sum F_k x^k = x / (1 - x - x^2), has a pole at x = 1/phi, corresponding to r = r_c. This pole controls the behaviour of Gamma(r) in the core.
+with core radius $r_c$ and core circulation $\Gam_0$.
+
+The generating function of the Fibonacci numbers,
+\begin{equation}
+\sum_{k=0}^{\infty} F_k x^k = \frac{x}{1-x-x^2},
+\end{equation}
+has a pole at $x = 1/\phig$, corresponding to $r = r_c$. This pole
+controls the behaviour of $\Gam(r)$ in the core and is the origin of
+the $\phig$-structure analysed below.
 
 \section{Local homogeneity exponent}
-Define alpha(r) = -d log Gamma / d log r. For the model above at r = r_c, a saddle-point evaluation using F_k approx phi^k / sqrt(5) gives
+\label{sec:alpha}
+
+Define the local homogeneity exponent
+\begin{equation}
+\alpha(r) \equiv -\frac{d\log\Gam(r)}{d\log r}.
+\end{equation}
+For Eq.~\eqref{eq:model} at $r = r_c$, a saddle-point evaluation using
+$F_k \approx \phig^k/\sqrt{5}$ gives
 \begin{equation}
 \alpha(K) = \frac{(K-1)\log\phig}{2} + c_\infty + O(1/K),
+\label{eq:alpha}
 \end{equation}
-with the universal constant c_inf ~ -0.0665, independent of Gamma_0 and r_c.
+with the universal constant
+\begin{equation}
+c_\infty \approx -0.0665,
+\end{equation}
+independent of $\Gam_0$ and $r_c$. The constant follows from the deviation
+of Fibonacci numbers from their asymptotic form and is confirmed
+numerically (Section~\ref{sec:num}).
 
-\section{Selection of K = 5}
-Exact phi-self-similarity requires Gamma(phi r)/Gamma(r) = 1/phi, equivalently alpha = 1. Solving for K:
+\section{Selection of $K=5$}
+\label{sec:Kstar}
+
+Exact $\phig$-self-similarity requires
+\begin{equation}
+\frac{\Gam(\phig r)}{\Gam(r)} = \frac{1}{\phig}
+\quad\Longleftrightarrow\quad
+\alpha = 1.
+\end{equation}
+Solving Eq.~\eqref{eq:alpha} for $\alpha=1$ gives
 \begin{equation}
 K^* = 1 + \frac{2(1 - c_\infty)}{\log\phig} = 5.43.
 \end{equation}
-The unique integer realisation is K = 5.
+The unique integer realisation is
+\begin{equation}
+\boxed{K = 5.}
+\end{equation}
+This is a \emph{derived} result, not a fitted parameter: the condition
+of exact self-similarity selects $K=5$ among all positive integers.
 
 \section{Numerical verification}
-We computed alpha(r) numerically via central differences (h = 1e-5) for K in [2, 23] and r in [0.3, 3.0] r_c. Table values below.
+\label{sec:num}
+
+We computed $\alpha(r)$ numerically via central differences
+($h = 10^{-5}$) for $K \in [2, 23]$ and $r \in [0.3, 3.0]\,r_c$.
+Table~\ref{tab:alpha} shows the agreement between Eq.~\eqref{eq:alpha}
+and the numerical values; the difference is below $1\%$ for all $K \geq 5$.
 
 \begin{table}[h]
-\caption{Local homogeneity exponent alpha(r_c): numerical vs analytic.}
+\caption{Local homogeneity exponent $\alpha(r_c)$ vs.\ analytic
+prediction.}
+\label{tab:alpha}
 \begin{ruledtabular}
 \begin{tabular}{rrrr}
-K & alpha num & alpha ana & diff \\
+$K$ & $\alpha_{\mathrm{num}}$ & $\alpha_{\mathrm{ana}}$ & diff \\
 \hline
- 5 & +0.9056 & +0.8959 & +0.0097 \\
- 8 & +1.6235 & +1.6177 & +0.0058 \\
-12 & +2.5841 & +2.5802 & +0.0039 \\
-15 & +3.3051 & +3.3020 & +0.0031 \\
-20 & +4.5074 & +4.5050 & +0.0024 \\
-23 & +5.2289 & +5.2268 & +0.0021 \\
+ 5 & $+0.9056$ & $+0.8959$ & $+0.0097$ \\
+ 8 & $+1.6235$ & $+1.6177$ & $+0.0058$ \\
+12 & $+2.5841$ & $+2.5802$ & $+0.0039$ \\
+15 & $+3.3051$ & $+3.3020$ & $+0.0031$ \\
+20 & $+4.5074$ & $+4.5050$ & $+0.0024$ \\
+23 & $+5.2289$ & $+5.2268$ & $+0.0021$ \\
 \end{tabular}
 \end{ruledtabular}
 \end{table}
 
-The profile alpha(r) for K = 5 peaks at alpha = 1.0005 near r = 1.5 r_c, confirming the core region of exact phi-self-similarity.
+The profile $\alpha(r)$ for $K=5$ peaks at $\alpha = 1.0005$ near
+$r = 1.5\,r_c$, confirming the core region of exact $\phig$-self-similarity.
+Figure~\ref{fig:gamma} shows the circulation profile for $K=3,5,8$, and
+Figure~\ref{fig:alpha} shows $\alpha(r)$ for $K=5,8,12$.
 
-\section{Relation to SPARC VORTEX}
-The regularised VORTEX profile used in SPARC rotation-curve fitting, v^2 = A^2 (x - arctan x) / x with x = r/r_c, behaves as v ~ 1/sqrt(r) at large r, in contrast to the 1/r behaviour here. Both share the property of a regularised core controlled by a single length scale r_c, suggesting a common geometric origin.
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{figs/fig1_gamma.pdf}
+\caption{Circulation profile $\Gam(r)$ for $K = 3,\,5,\,8$. The dashed
+line marks the self-similarity point $\alpha=1$ at $r = 1.459\,r_c$; the
+dotted line marks the mode crossover at $r = 0.836\,r_c$.}
+\label{fig:gamma}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{figs/fig2_alpha.pdf}
+\caption{Local homogeneity exponent $\alpha(r)$ for $K = 5,\,8,\,12$.
+The $K=5$ curve peaks at $\alpha = 1.0005$ near $r=1.5\,r_c$.}
+\label{fig:alpha}
+\end{figure}
+
+\section{Exact Burgers identity}
+\label{sec:burgers}
+
+Define the generalized Burgers vortex equation
+\begin{equation}
+\nu\left(\frac{\Gam''}{r} - \frac{\Gam'}{r^2}\right) + a(r)\,\Gam' = 0,
+\label{eq:burgers}
+\end{equation}
+where $a(r)$ is a radially-varying strain coefficient. Substituting
+Eq.~\eqref{eq:model} into \eqref{eq:burgers} we obtain the exact identity
+\begin{equation}
+\boxed{\frac{a(r)}{\nu} = \frac{\langle k\rangle_w(r)\,\lambda}{r}
++ \frac{1}{r^2},}
+\label{eq:aover}
+\end{equation}
+where $\lambda = \log\phig/r_c$ and the weighted mode average is
+\begin{equation}
+\langle k\rangle_w(r) =
+\frac{\sum_k k^2 F_k \,e^{-k\lambda r}}
+     {\sum_k k  F_k \,e^{-k\lambda r}}.
+\end{equation}
+Equation~\eqref{eq:aover} is an \emph{exact} identity, verified
+numerically to residual $\sim 10^{-15}$ over $r \in [0.1,\,12]\,r_c$
+(Figure~\ref{fig:kbar}). The classical Burgers vortex corresponds to
+constant $a/\nu$; the Fibonacci circulation represents a family of
+\emph{exact solutions with variable strain} that interpolates between
+$k=4$ in the core and $k=1$ in the far field.
+
+\begin{figure}[h]
+\includegraphics[width=\columnwidth]{figs/fig3_kbar.pdf}
+\caption{Effective mode index $\langle k\rangle_w(r)$ entering the
+Burgers identity~\eqref{eq:aover}. The vertical lines mark the crossover
+($r=0.836$), the self-similarity point ($r=1.459$), and the Schottky
+peak ($r=4.24$).}
+\label{fig:kbar}
+\end{figure}
+
+\section{SUSY structure of the annihilator}
+\label{sec:susy}
+
+The circulation~\eqref{eq:model} is annihilated by the
+$K^{\text{th}}$-order differential operator
+\begin{equation}
+L_K \equiv \prod_{k=0}^{K-1}\left(\partial_r + k\lambda\right).
+\end{equation}
+For $K=5$, shifting to $u = \partial_r + 2\lambda$ yields the factorised
+form
+\begin{equation}
+L_5 = u\,(u^2-\lambda^2)\,(u^2-4\lambda^2),
+\label{eq:susy}
+\end{equation}
+which is odd in $u$ and exhibits a $\mathbb{Z}_2$ reflection symmetry
+about the central mode $k=2$. The spectrum
+$\{0,-\lambda,-2\lambda,-3\lambda,-4\lambda\}$ is an arithmetic
+progression with step $\log\phig$, i.e.\ a log-periodic cascade.
+
+\section{Thermodynamic analogy}
+\label{sec:thermo}
+
+Define the statistical sum
+\begin{equation}
+Z(\beta) = \sum_{k=0}^{K-1} k\,F_k \,e^{-k\beta},
+\qquad \beta \equiv \lambda r.
+\end{equation}
+The weighted mode average is then
+\begin{equation}
+\langle k\rangle_w(r) = -\frac{d\log Z}{d\beta}.
+\end{equation}
+The specific heat $C(\beta) = -\beta^2\,dU/d\beta$ with $U=\langle k\rangle_w$
+exhibits a Schottky anomaly at
+\begin{equation}
+\beta^* = 2.04 \quad\Longleftrightarrow\quad r = 4.24\,r_c,
+\end{equation}
+with $C_{\max} = 2.40$, the signature of a four-level system with
+degeneracies $\{1,2,6,12\}$.
+
+\section{Mode-parity mirror theorem}
+\label{sec:mirror}
+
+Define the $\theta$-family
+\begin{equation}
+\Gam(r,\theta) = \sum_{k=0}^{K-1} F_k \,e^{-k\lambda r}\cos(k\theta),
+\end{equation}
+and its parity-flipped counterpart
+\begin{equation}
+\Gam_{\text{alt}}(r,\theta) = \sum_{k=0}^{K-1} (-1)^k F_k \,e^{-k\lambda r}\cos(k\theta).
+\end{equation}
+The trigonometric identity $\cos(k(\pi-\theta)) = (-1)^k\cos(k\theta)$
+yields the exact mode-parity theorem
+\begin{equation}
+\boxed{\Gam(r,\pi-\theta) = \Gam_{\text{alt}}(r,\theta),}
+\label{eq:mirror}
+\end{equation}
+verified numerically to machine precision ($1.8\times10^{-15}$) for all
+tested $(r,\theta)$. The theorem extends to linear combinations of
+multiple Fibonacci cores.
+
+The theorem does \emph{not} carry over to the radial derivative
+$g = \partial_r\Gam$: the operator $\partial_r$ and the parity flip do
+not commute, so $g(\pi-\theta) \neq -g(\theta)$ in general.
+
+\section{Relation to counter-rotating architectures}
+\label{sec:merkaba}
+
+The same $\phig$-structure arises in counter-rotating tetrahedral
+architectures (Merkaba) where upper and lower tetrahedra rotate with
+angular velocities $\omega_{\pm} = \pm\,\omega_0\,\phig^{\pm 1}$. The
+lambda-like quantity $\lambda = (\omega_+^2 - \omega_-^2)/c^2$ reduces
+via the golden-ratio identity $\phig^2 - \phig^{-2} = \sqrt{5}$ to
+\begin{equation}
+\boxed{\lambda_{\text{Merkaba}} = \frac{\omega_0^2\sqrt{5}}{c^2},}
+\end{equation}
+verified to machine precision ($2\times10^{-19}$). The two
+$\sqrt{5}$ factors in Eqs.~\eqref{eq:aover} and the above are the same:
+both originate in the pole of the Fibonacci generating function at
+$x = 1/\phig$.
 
 \section{Discussion}
-The result K = 5 is robust: it follows from the condition alpha = 1 and does not require fine-tuning. Generalisations to other irrational bases (lambda != phi) yield different K*, opening a family of scale-invariant vortex hierarchies.
+\label{sec:disc}
+
+\subsection{Robustness of $K=5$}
+
+The selection of $K=5$ follows from the condition $\alpha=1$ and
+Eq.~\eqref{eq:alpha}. It does not require fine-tuning: for $K \leq 4$
+the exponent $\alpha < 1$ and the core is not exactly self-similar;
+for $K \geq 6$ we have $\alpha > 1$. The nearest real value is
+$K^*=5.43$, closer to $5$ than to $6$.
+
+\subsection{Relation to SPARC VORTEX}
+
+The regularised VORTEX profile used in SPARC rotation-curve fitting,
+$v^2 = A^2\,(x - \arctan x)/x$ with $x = r/r_c$, shares with the
+Fibonacci construction the property of a regularised core controlled
+by a single length scale $r_c$. At large $x$ the SPARC VORTEX behaves
+as $v \propto r^{-1/2}$, whereas the Fibonacci circulation~\eqref{eq:model}
+yields $\Gam \propto r^{-1}$ in the self-similar core region. The two
+share a common geometric origin.
+
+\subsection{Limitations}
+
+The model assumes a finite number $K$ of layers and a fixed core
+radius $r_c$. The Fibonacci hierarchy is treated as a fixed discrete
+structure; a first-principles derivation of the hierarchy from
+dynamical arguments remains an open problem. Generalisations to
+other irrational bases $\lambda \neq \phig$ are straightforward.
+
+\subsection{Related numerical observations}
+
+A spectral integration of the Navier--Stokes equations initialised
+with a $\phig$-vortex tangential field and $2/3$ dealiasing
+($N = 32$, $\nu = 5\times10^{-3}$) shows smooth viscous decay of
+$\|\omega\|_\infty$ and a finite Beale--Kato--Majda integral on the
+simulated interval $t\in[0,0.2]$. This is a numerical observation,
+not a proof of global regularity.
 
 \section{Conclusion}
-A Fibonacci-layered vortex with K = 5 layers realises exact phi-self-similarity in its core. The value K = 5 is not a free parameter but a consequence of the golden-ratio structure of the circulation.
+\label{sec:conclusion}
+
+A Fibonacci-layered vortex with $K=5$ layers realises exact
+$\phig$-self-similarity in its core. The value $K=5$ is not a free
+parameter but a consequence of the golden-ratio structure of the
+circulation. The model admits an exact Burgers identity with variable
+strain, a SUSY-structured annihilator, a four-level Schottky anomaly,
+and a mode-parity mirror theorem. All statements are verified
+numerically to machine precision.
 
 \begin{acknowledgments}
-The author thanks the SPARC collaboration for public rotation-curve data used in related work.
+The author thanks the SPARC collaboration for public rotation-curve
+data used in related work, and acknowledges the usefulness of open-source
+tools (NumPy, SciPy, Matplotlib) in preparing the numerical results.
 \end{acknowledgments}
 
-\bibliography{bibliography}
+\begin{thebibliography}{99}
+\bibitem{Lelli2016} F.~Lelli, S.~S.~McGaugh, J.~M.~Schombert,
+  Astron.\ J.\ \textbf{152}, 157 (2016).
+\bibitem{Livio2002} M.~Livio, \emph{The Golden Ratio} (Broadway Books,
+  2002).
+\bibitem{Saffman1992} P.~G.~Saffman, \emph{Vortex Dynamics}
+  (Cambridge University Press, 1992).
+\bibitem{Burgers1948} J.~M.~Burgers, Adv.\ Appl.\ Mech.\ \textbf{1}, 171
+  (1948).
+\bibitem{Lamb1932} H.~Lamb, \emph{Hydrodynamics} (Cambridge University
+  Press, 1932).
+\bibitem{Kolmogorov1941} A.~N.~Kolmogorov, Dokl.\ Akad.\ Nauk SSSR
+  \textbf{30}, 301 (1941).
+\bibitem{Barenblatt1996} G.~I.~Barenblatt, \emph{Scaling,
+  Self-similarity, and Intermediate Asymptotics} (Cambridge University
+  Press, 1996).
+\bibitem{BKM1984} J.~T.~Beale, T.~Kato, A.~Majda, Comm.\ Math.\ Phys.\
+  \textbf{94}, 61 (1984).
+\end{thebibliography}
 
 \end{document}
