@@ -444,3 +444,27 @@ This is a FUNDAMENTAL POSITIVE result:
 The FibonacciVortex is a well-posed, stable mathematical object.
 
 ## PROBES #2, #3 CLOSED — POSITIVE
+
+
+## Probe #9: phi-structure in Aubry-Andre — NEGATIVE (2026-09-22)
+
+Test: compare AA spectra at alpha=1/phi vs alpha=sqrt(2)-1, N=1500,
+20 random phases averaged.
+
+FFT of log-gap density:
+  alpha=1/phi:   peaks at 0.0663, 0.1327, 0.1990, 0.2653
+  alpha=sqrt2-1: peaks at 0.0655, 0.1310, 0.1965, 0.2620
+  Difference < 1.5% — numerical noise, not physics.
+
+Spectrum range:
+  phi: 5.1950, sqrt2-1: 5.1821 (0.25% difference)
+
+Gap ratios near phi: 1 of 798 (statistical fluctuation).
+
+Conclusion: Aubry-Andre does not distinguish phi from other
+irrationals in its spectral structure. FibonacciVortex is NOT
+spectrally related to AA via phi-log-periodicity.
+
+Honest negative result.
+
+## PROBE #9 CLOSED — NEGATIVE
