@@ -340,3 +340,41 @@ Prior test without dealiasing produced NaN (aliasing artifact).
 With 2/3 dealiasing the scheme is stable.
 
 ## ABSOLUTE FINAL — 2026-09-21/22
+
+
+## Physical motivation search (2026-09-22) — NEGATIVE
+
+Tested three physical mechanisms for why phi-hierarchy is selected:
+
+### H4 — RG-invariance of Burgers equation
+Ratio a/nu(phi*r) / a/nu(r) = 0.48 not 1/phi = 0.618.
+FAIL. Not a renormalization fixed point.
+
+### H2 — Absence of linear resonances
+min|frac(log(k*phi)/log(phi))| = 0.119.
+Compare: e gives 0.099, sqrt(2) gives 0.000, 1.5 gives 0.031.
+Weak signal: phi avoids resonances, but e does too. NOT unique.
+
+### H1 — Log-periodic cascade in Sabra shell model
+Tested lambda in {2.0, phi, e, sqrt(2)}.
+Slopes: 2.0 -> -1.47, phi -> -1.99, e -> -1.17, sqrt(2) -> -1.57.
+K41 target: -1.67.
+Best: sqrt(2) (|dK41|=0.096). phi (|dK41|=0.328) NOT special.
+FFT peak frequencies: 0.096-0.192 for all, far from omega_target.
+FAIL. Shell model turbulence does not support phi-selection.
+
+### Variational test
+mu(r) = (G/r)/(G/r - G/r^2): monotone 0.16 -> 20.41.
+No fixed mu. Gamma_fib is NOT an Euler-Lagrange solution
+for E, E+mu*Omega, enstrophy, or helicity functionals.
+
+### Conclusion
+Four independent physical mechanisms for phi-selection tested.
+All fail. The FibonacciVortex is a MATHEMATICAL structure,
+not physically selected by energy, RG, resonances, or cascade.
+
+This is a decisive NEGATIVE result for physical motivation.
+Publication strategy: mathematical journal (J. Phys. A),
+not physics journal (Physics of Fluids).
+
+## END OF PHYSICAL MOTIVATION SEARCH — 2026-09-22
