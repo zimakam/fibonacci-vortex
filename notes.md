@@ -576,3 +576,31 @@ proved analytically. This is a genuine theorem, not a numerical fit.
 
 ## PROBE #10 CLOSED — ANALYTIC THEOREM VERIFIED
 ## SESSION 2026-09-22 COMPLETE
+
+
+## Millennium NS Step 1: Non-stationary stability (2026-09-22)
+
+### Setup
+Evolution: d_t Gamma = nu*(G''/r - G'/r^2) + a(r)*G'
+where a/nu = <k>_w*LAM/r + 1/r^2 (variable strain).
+Backward Euler implicit, N=200, r in [0.3, 10.0], T=5.
+
+### Theoretical prediction
+Slowest mode: Re(lambda_max) = -0.0323
+Time constant: tau = 30.95
+At T=5: exp(-T/tau) = 0.8508
+
+### Numerical result
+sin(pi*x):        E(0)=0.250, E(T)=0.214, ratio=0.85616  (match 0.6%)
+sin(2*pi*x):      E(0)=0.250, E(T)=0.123, ratio=0.49359
+sin(5*pi*x):      E(0)=0.250, E(T)=0.011, ratio=0.04476
+gaussian(3.0):    E(0)=0.019, E(T)=0.0018, ratio=0.09427
+random 1%:        E(0)=0.0043, E(T)=1.4e-5, ratio=0.00335
+random 10%:       E(0)=0.450, E(T)=0.0022, ratio=0.00492
+
+### Conclusion
+All perturbations decay exponentially to Gamma_fib.
+Numerical evidence for GLOBAL ASYMPTOTIC STABILITY.
+Slowest mode matches theoretical prediction within 0.6%.
+
+## NS STEP 1 CLOSED — POSITIVE (numerical)
