@@ -468,3 +468,31 @@ spectrally related to AA via phi-log-periodicity.
 Honest negative result.
 
 ## PROBE #9 CLOSED — NEGATIVE
+
+
+## Probe #7 follow-up: GravVortex omega-parametrization — also NEGATIVE
+
+Tested alternative parametrization from GravVortexIntegration-v3:
+  rho(r) = kappa * omega^2, omega = |dGamma/dr| / (2*pi*r)
+  M(r) = integral 4*pi*rho*r^2 dr
+  v_DM^2 = G * M(r) / r
+
+Results on 4 test galaxies:
+  D564-8:  VORTEX=0.47, GravVortex=39.42  (fail)
+  DDO064:  VORTEX=0.46, GravVortex=8.72   (fail)
+  F561-1:  VORTEX=1.24, GravVortex=1.24   (same)
+  F563-V1: VORTEX=0.29, GravVortex=0.28   (better)
+
+Root cause: rho = kappa * omega^2 with omega = dGamma/(2*pi*r)
+gives rho ~ 0.3 M_sun/kpc^3 at r=1 — many orders too small.
+Even with A_scale=1e6, v_DM ~ 10 km/s, need 50-300 km/s.
+
+THREE independent SPARC parametrizations tested:
+  1. M(r) = direct function of Gamma_fib — chi2/dof = 43
+  2. M(r) = integral of Gamma_fib as density — chi2/dof = 43
+  3. rho = omega^2 (GravVortex style) — chi2/dof = 8-40
+
+All fail. FibonacciVortex is NOT a DM halo profile.
+This is structural, not fixable by refitting.
+
+## FINAL VERDICT ON PROBE #7: NEGATIVE, unambiguously
